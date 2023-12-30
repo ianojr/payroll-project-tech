@@ -72,6 +72,15 @@
     font-size: 1.2rem;
     color: white;
 }
+.forms{
+    margin: 30px 5px;
+}
+thead tr th{
+    border: solid 1px ;
+}
+tbody tr td{
+    border: solid 1px;
+}
 
 @media (max-width: 952px){
     .left-grid{

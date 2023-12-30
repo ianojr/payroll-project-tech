@@ -1,55 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>payroll-project</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon"
+    href="data:image/jpeg;base64,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">
 </head>
+
 <body>
-    <div class="navbar">
-        <div class="contact">
-            <i class="fa-solid fa-mobile-screen fa-l" style="color: #1b3c74;"> +254 701 562 812</i>
-            
+  <div class="navbar">
+    <div class="contact">
+      <i class="fa-solid fa-mobile-screen fa-l" style="color: #1b3c74;"> +254 701 562 812</i>
+
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="https://www.payroll.ke/image/site/payroll-logo.png" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#">Resources</a>
+            <a style="color: orange;" class="nav-link" href="#">login</a>
+          </div>
         </div>
+      </div>
+    </nav>
+  </div>
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="https://www.payroll.ke/image/site/payroll-logo.png" alt="Logo"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  <a class="nav-link" href="#">Features</a>
-                  <a class="nav-link" href="#">Pricing</a>
-                  <a class="nav-link" href="#">Resources</a>
-                  <a style="color: orange;" class="nav-link" href="#">login</a>
-                </div>
-              </div>
-            </div>
-          </nav>
+  <div class="left-grid">
+    <h1><b>NET PAY CALCULATOR</b></h1>
+    <p>Enter the gross salary below amount to calculate your net amount.
+    </p>
+
+    <div class="tholder">
+      <form class="forms" action="" id="my_form">
+        <label for="number-input">KES</label>
+        <input id="input_salary" class="number-input" type="number">
+        <input class="button" type="submit" value="CALCULATE">
+      </form>
+
+      <table class="table" id="datatable">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Base salary</td>
+            <td id="base_salary"></td>
+          </tr>
+          <tr>
+            <td><span>NSSF Tier 1</span><br><span>NSSF Tier 1</span></td>
+            <td><span id="nssf_tier_1"></span><br><span id="nssf_tier_2"></span></td>
+          </tr>
+          <tr>
+            <td>Final P.A.Y.E</td>
+            <td id="final_paye"></td>
+          </tr>
+          <tr>
+            <td>NHIF</td>
+            <td id="nhif"></td>
+          </tr>
+          <tr>
+            <td>Net pay</td>
+            <td id="net_pay"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    
-    <div class="left-grid">
-        <h1><b>NET PAY CALCULATOR</b></h1>
-        <p>Enter the gross salary below amount to calculate your net amount.
-        </p>
 
-        <div class="tholder">
-          <label for="number-input">KES</label>
-          <input class="number-input" type="number">
-          <input class="button" type="submit" value="CALCULATE">
-        </div>
-    </div>
+  </div>
 
-    <div class="right-grid">
+  <div class="right-grid">
 
-    </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
