@@ -28,6 +28,7 @@
     width: 30%;
     height: 100vh;
     border: solid 1px grey;
+    padding: 3%;
 }
 .navbar-nav{
     position: absolute;

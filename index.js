@@ -66,12 +66,23 @@ form.addEventListener('submit', function(e){
 
     let rate;
     // calculating the paye
-    if (input>0 && input < 24000){
-        rate = ((input - 24000) * 0.1) + ((24000 * 0.1) - 2400)
+    if (input >= 24000){
+        if (input > 0 && input <= 24000){
+            rate = 0.1
+        }
+        else if(input > 24000 && input <= 32333){
+            rate = 0.25
+        }
+        else if(input > 32333){
+            rate = 0.3
+        }
     }else{
-        rate = ((input - 32333) * 0.3) + ((24000 * 0.1) - 2400)
+        rate = 0
     }
     paye = (input*rate)
+
+    //calculating the net pay
+    let net_salary = (input - ((nssf1+nhif)+paye)+2400)
 
 
     document.getElementById('base_salary').innerHTML = input
@@ -79,7 +90,7 @@ form.addEventListener('submit', function(e){
     document.getElementById('nssf_tier_2').innerHTML = nssf2
     document.getElementById('final_paye').innerHTML = paye
     document.getElementById('nhif').innerHTML = nhif
-    document.getElementById('net_pay').innerHTML = 'notyet'
+    document.getElementById('net_pay').innerHTML = net_salary
 
     form.reset()
 })
